@@ -2,7 +2,7 @@ plugin:
   bootstrap_package:
     settings:
       scss:
-        primary: '#eb3e4a'
+        primary: '#213e6d'
         secondary: '#013859'
     view:
       layoutRootPath: 'EXT:bca13/Resources/Private/Layouts/'
