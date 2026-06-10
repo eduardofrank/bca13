@@ -1,5 +1,5 @@
-plugin.bootstrap_package.settings.scss.primary: '#eb3e4a'
-plugin.bootstrap_package.settings.scss.secondary: '#013859'
+plugin.bootstrap_package.settings.scss.primary: '#213E6D'
+plugin.bootstrap_package.settings.scss.secondary: '#4890F9'
 plugin.bootstrap_package.view.layoutRootPath: 'EXT:bca13/Resources/Private/Layouts/'
 plugin.bootstrap_package.view.partialRootPath: 'EXT:bca13/Resources/Private/Partials/'
 plugin.bootstrap_package.view.templateRootPath: 'EXT:bca13/Resources/Private/Templates/'
@@ -8,11 +8,11 @@ plugin.bootstrap_package_contentelements.view.layoutRootPath: 'EXT:bca13/Resourc
 plugin.bootstrap_package_contentelements.view.partialRootPath: 'EXT:bca13/Resources/Private/Partials/ContentElements/'
 plugin.bootstrap_package_contentelements.view.templateRootPath: 'EXT:bca13/Resources/Private/Templates/ContentElements/'
 
-page.logo.file: 'EXT:bca13/Resources/Public/Images/logo.svg'
-page.logo.fileInverted: 'EXT:bca13/Resources/Public/Images/logo-inverted.svg'
-page.logo.width: 192
-page.logo.alt: 'My Site Package'
-page.logo.linktitle: 'My Site Package'
+page.logo.file: 'EXT:bca13/Resources/Public/Images/bca-192x192.png'
+page.logo.fileInverted: 'EXT:bca13/Resources/Public/Images/bca-192x192.png'
+page.logo.width: 210
+page.logo.alt: 'bca13'
+page.logo.linktitle: 'bca13'
 
 page.favicon.file: 'EXT:bca13/Resources/Public/Icons/favicon.ico'
 
