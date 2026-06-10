@@ -30,6 +30,12 @@ config.contentObjectExceptionHandler = 0
 plugin.tx_form.settings.yamlConfigurations.100 = EXT:bca13/Configuration/Form/FormSetup.yaml
 module.tx_form.settings.yamlConfigurations.100 = EXT:bca13/Configuration/Form/FormSetup.yaml
 
+#### DISQUS COMMENTS ###
+# Set the shortname directly (the {$ns_disqus_comments.shortName} constant can't be
+# overridden from a site-package settings.yaml because the dotted key collides with the
+# set's category node). Was in v12 Extension Configuration; value recovered from production.
+plugin.tx_nsdisquscomments_comment.settings.ShortName = belgrade-christian-assembly
+
 ### Favicon ###
 page.headerData.2121 = TEXT 
 page.headerData.2121.value {

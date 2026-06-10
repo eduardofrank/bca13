@@ -2,3 +2,6 @@ name: eduardo-frank/bca13
 label: 'bca13'
 dependencies:
   - bootstrap-package/full
+  # Depend on the Disqus set so bca13 loads AFTER it and its setup.typoscript can
+  # override plugin.tx_nsdisquscomments_comment.settings.ShortName.
+  - nitsan/ns-disqus-comments

@@ -1,5 +1,8 @@
 plugin.bootstrap_package.settings.scss.primary: '#213E6D'
 plugin.bootstrap_package.settings.scss.secondary: '#4890F9'
+plugin.bootstrap_package.settings.scss.tertiary: '#F6F9FF'
+plugin.bootstrap_package.settings.scss.quaternary: '#F1F1E6'
+plugin.bootstrap_package.settings.scss.link-color: '$secondary'
 plugin.bootstrap_package.view.layoutRootPath: 'EXT:bca13/Resources/Private/Layouts/'
 plugin.bootstrap_package.view.partialRootPath: 'EXT:bca13/Resources/Private/Partials/'
 plugin.bootstrap_package.view.templateRootPath: 'EXT:bca13/Resources/Private/Templates/'
