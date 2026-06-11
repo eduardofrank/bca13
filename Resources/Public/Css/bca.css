@@ -8,6 +8,15 @@ body, .body-bg {
     background-color:#fff;
   }
 
+  /* The sticky navbar shrinks on scroll (stickyheader.js toggles .navbar-transition at
+     scrollY>120, dropping its height ~110px→70px). That height change happens above the
+     scroll position, so browser scroll-anchoring re-adjusts the offset, re-crosses the
+     threshold and re-toggles the shrink → a shiver. Opt out of scroll anchoring so the
+     shrink happens once, cleanly. */
+  html {
+      overflow-anchor: none;
+  }
+
   /* Main navbar: push menu to the right. BS15 makes the nav ul width:100% on
      desktop, so margin-left:auto has no effect — use justify-content instead. */
   #mainnavigation .navbar-nav {
