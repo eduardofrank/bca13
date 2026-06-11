@@ -73,7 +73,11 @@ body, .body-bg {
   /*** Misc. Layouts ***/
   /*********************/
   
-  .frame-container-default {
+  /* NOTE: leftover v12 rule. BS15 frames use the class `frame-container-default`, but
+     this `.frame-layout-default` selector intentionally matches NOTHING under BS15 (same
+     as production) — BS15 already pads every .frame natively (1.75rem). Do not rename it
+     to .frame-container-default or every frame gets an extra 5.5em. */
+  .frame-layout-default {
       padding: 5.5em 0;
   }
   
@@ -203,3 +207,12 @@ body, .body-bg {
       border-bottom-left-radius: 0.25rem;
       border-color: #fff;
   }
+
+
+  /*********************/
+  /***** POWERMAIL *****/
+  /*********************/
+
+  .tx-powermail .powermail_fieldwrap+.powermail_fieldwrap {
+    margin-block-start: 0 !important;
+}

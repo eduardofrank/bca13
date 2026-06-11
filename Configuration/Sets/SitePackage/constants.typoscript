@@ -1,0 +1,8 @@
+# Bootstrap Package SCSS overrides that are NOT formal Site-Set settings.
+#
+# bk2k CompileService::getVariablesFromConstants() reads SCSS parser variables from
+# TypoScript CONSTANTS under `plugin.bootstrap_package.settings.scss.`. Values placed in
+# the set's settings.yaml only survive if they have a matching settings.definitions entry;
+# `link-decoration` has none, so it must live here as a real constant to reach the SCSS
+# compiler. Matches production (links blue, not underlined).
+plugin.bootstrap_package.settings.scss.link-decoration = none
