@@ -8,10 +8,39 @@ body, .body-bg {
     background-color:#fff;
   }
 
+  /* Keep page content clear of the fixed/sticky navbar (page.theme.navigation.type=top).
+     Values approximate the navbar height per breakpoint. */
+  @media (min-width: 300px) {
+      body, .body-bg {
+          padding:35px 0 0 0;
+      }
+  }
+
+  @media (min-width: 992px) {
+      body, .body-bg {
+          padding:80px 0 0 0;
+      }
+  }
+
+  @media (min-width: 1200px) {
+      body, .body-bg {
+          padding: 55px 0 0 0;
+      }
+  }
+
   /* Main navbar: push menu to the right. BS15 makes the nav ul width:100% on
      desktop, so margin-left:auto has no effect — use justify-content instead. */
   #mainnavigation .navbar-nav {
       justify-content: flex-end;
+  }
+
+  /* Open main-navigation dropdowns on hover at desktop width, like the old/production
+     navbar. BS15 defaults to click-to-open (data-bs-toggle). 992px = $grid-float-breakpoint
+     (the navbar-expand point); below it the collapsed menu keeps the click toggle. */
+  @media (min-width: 992px) {
+      .navbar-mainnavigation .nav-item:hover > .dropdown-menu {
+          display: block;
+      }
   }
 
   /* HEADINGS */

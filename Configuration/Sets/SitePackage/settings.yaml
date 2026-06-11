@@ -22,6 +22,10 @@ page.favicon.file: 'EXT:bca13/Resources/Public/Icons/favicon.ico'
 # Single-language site — hide the footer language menu (the "English" link), as in v12
 page.theme.language.enable: 0
 
+# Fixed/sticky main navbar, as in v12/production (navbar-fixed-top). Pairs with the
+# body top-padding in bca.css that keeps content clear of the fixed menu.
+page.theme.navigation.type: top
+
 page.fluidtemplate.layoutRootPath: 'EXT:bca13/Resources/Private/Layouts/Page/'
 page.fluidtemplate.partialRootPath: 'EXT:bca13/Resources/Private/Partials/Page/'
 page.fluidtemplate.templateRootPath: 'EXT:bca13/Resources/Private/Templates/Page/'
