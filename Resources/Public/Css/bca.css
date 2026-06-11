@@ -51,24 +51,34 @@ html {
    992px = $grid-float-breakpoint (navbar-expand point); below it the collapsed menu
    keeps the click toggle. */
 @media (min-width: 992px) {
-    /* BS15 stretches the mega dropdown (About Us) to the full container. Anchor it to
-       its own item, cap the width, and right-align it — About Us is the last item, so it
-       must open leftward to stay on screen. */
+    /* Narrower dropdowns (~25–30% less than the BS defaults): smaller column width for the
+       simple menus, smaller cap for the mega (About Us) menu. */
+    .navbar-mainnavigation {
+        --mainnavigation-dropdown-column-min-width: 160px;
+    }
     .navbar-mainnavigation .nav-style-mega {
         position: relative;
     }
+    /* Anchor BOTH the hover- and click-opened submenus to the same spot (top:100%, no
+       spacer margin) so they don't sit ~10px apart. BS15 also stretches the mega menu to
+       the full container, so right-align and cap it (About Us is the last item → opens
+       leftward to stay on screen). */
+    .navbar-mainnavigation .nav-style-simple > .dropdown-menu {
+        top: 100%;
+        margin-top: 0;
+    }
     .navbar-mainnavigation .nav-style-mega > .dropdown-menu {
+        top: 100%;
+        margin: 0;
         left: auto;
         right: 0;
-        margin: 0;
         width: auto;
-        max-width: 50rem;
+        max-width: 35rem;
     }
-    /* Show the submenu on hover, dropped below the menu baseline (not covering it). */
+    /* Show the submenu on hover. */
     .navbar-mainnavigation .nav-item.nav-style-simple:hover > .dropdown-menu,
     .navbar-mainnavigation .nav-item.nav-style-mega:hover > .dropdown-menu {
         display: block;
-        top: 100%;
     }
 }
 
@@ -111,6 +121,12 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 #p62 td {
     min-width: 7em;
+}
+
+#p62 caption {
+    font-size: .75rem;
+    font-weight: 500;
+    color: var(--bca-tertiary);
 }
 
 /* h3 headers in News */
@@ -254,9 +270,18 @@ ol.breadcrumb {
     margin-bottom: 0 !important;
 }
 
+.pagination {
+    gap: 0.5rem;
+}
+
+
 /*********************/
 /***** Prayer ********/
 /*********************/
+
+#p81 .form-control {
+    margin-bottom: 1rem;
+}
 
 /* Prayer Request Detail View — white headings handled in the grouped rule above. */
 #p81 .page-item:first-child .page-link,
@@ -268,10 +293,28 @@ ol.breadcrumb {
     border-color: var(--bca-white);
 }
 
+
 /*********************/
 /***** POWERMAIL *****/
 /*********************/
 
 .tx-powermail .powermail_fieldwrap + .powermail_fieldwrap {
     margin-block-start: 0 !important;
+}
+
+/*********************/
+/***** ABOUT US ******/
+/*********************/
+
+#c175 blockquote {
+    position: relative;
+    padding: 1.25rem 1.5rem;
+    border-left: 4px solid var(--bca-quaternary);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    color: var(--bca-quaternary);
+}
+
+#c175 ol {
+    color: var(--bca-quaternary);
 }
