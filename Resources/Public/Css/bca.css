@@ -97,6 +97,17 @@ html {
     opacity: 0.75;
 }
 
+/* …and the active TEXT colour. BS sets .active { color: var(--bs-navbar-active-color) }, so
+   the always-active root (Home) is permanently coloured active. Neutralise the active-colour
+   variable for rootline ancestors so they render as normal links (still lighten on hover);
+   only the current page (aria-current) keeps the active colour. */
+.navbar-mainnavigation .nav-link.nav-link-main.active:not([aria-current="true"]) {
+    --bs-navbar-active-color: var(--bs-navbar-color);
+}
+.navbar-mainnavigation .nav-link.nav-link-main.active:not([aria-current="true"]):hover {
+    --bs-navbar-active-color: var(--bs-navbar-hover-color);
+}
+
 /* HEADINGS */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     margin-top: 0;
