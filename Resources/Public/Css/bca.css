@@ -80,6 +80,21 @@ html {
     .navbar-mainnavigation .nav-item.nav-style-mega:hover > .dropdown-menu {
         display: block;
     }
+    /* Hide the toggle caret indicators on desktop (hover opens the menus, like production).
+       They remain below this breakpoint for the collapsed click-to-toggle menu. */
+    .navbar-mainnavigation .nav-link-indicator {
+        display: none;
+    }
+}
+
+/* Main-nav highlight: BS15 marks every rootline item `.active`, so the root (Home) is
+   "active" on every page and stays underlined. Underline only the actual current page
+   (aria-current) instead. */
+.navbar-mainnavigation .nav-link.nav-link-main.active:before {
+    opacity: 0;
+}
+.navbar-mainnavigation .nav-link.nav-link-main[aria-current="true"]:before {
+    opacity: 0.75;
 }
 
 /* HEADINGS */
@@ -279,7 +294,8 @@ ol.breadcrumb {
 /***** Prayer ********/
 /*********************/
 
-#p81 .form-control {
+/* This serves as a catch all for form controls in the prayer request form and the feedback form on the home page.*/
+.form-control {
     margin-bottom: 1rem;
 }
 
